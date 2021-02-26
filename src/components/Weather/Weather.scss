@@ -1,0 +1,130 @@
+// 将图片绑定到对应id上
+.img {
+    background-size: 100% 100%;
+
+    &#background {
+        background-image: url(./img/background.jpg);
+    }
+
+    &#cloudy {
+        background-image: url(./img/cloudy.png);
+    }
+
+    &#leftArrow {
+        background-image: url(./img/leftArrow.png);
+    }
+
+    &#rain {
+        background-image: url(./img/rain.png);
+    }
+
+    &#refresh {
+        background-image: url(./img/refresh.png);
+    }
+
+    &#rightArrow {
+        background-image: url(./img/rightArrow.png);
+    }
+
+    &#snow {
+        background-image: url(./img/snow.png);
+    }
+
+    &#sunny {
+        background-image: url(./img/sunny.png);
+    }
+
+    &#thunderStorm {
+        background-image: url(./img/thunderStorm.png);
+    }
+}
+
+// 组件大小
+#start,
+#background {
+    width: 400px;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// 启动页
+#start {
+    border: 1px solid black;
+
+    button {
+        background-color: #f60;
+        color: white;
+        border: 1px solid black;
+        font-size: 32px;
+        font-weight: bold;
+        padding: 14px 12px;
+        cursor: pointer;
+    }
+}
+
+
+// 左右按钮
+.arrow {
+    background-color: transparent;
+    border: 0px;
+    margin: 30px;
+    --arrow-radius: 50px;
+    width: var(--arrow-radius);
+    height: var(--arrow-radius);
+    flex: 0 0 --arrow-radius;
+}
+
+// 中间的主体部分
+.main {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1 1;
+    color: white;
+    text-align: center;
+
+    .cityName {
+        padding: 20px 0px;
+        font-size: 36px;
+    }
+
+    .info {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .weatherIcon {
+            width: 80px;
+            height: 80px;
+        }
+
+        .temperatureNow {
+            margin: 10px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .temperatureRange {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            font-size: 18px;
+        }
+
+        .weatherName {
+            margin: 10px;
+            font-weight: bold;
+            font-size: 22px;
+        }
+    }
+
+    #refresh {
+        margin-top: 20px;
+        width: 100px;
+        height: 100px;
+    }
+}
